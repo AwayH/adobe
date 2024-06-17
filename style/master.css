@@ -71,7 +71,58 @@
 
 /* card ---------------------------- */
 
+.card {
+    position: relative;
+    -webkit-box-reflect: below -1px linear-gradient(to top, rgba(0, 0, 0, .3) 0, transparent 50%);
+}
+
+.card-body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body .fas {
+    color: #fff;
+    font-size: 2rem;
+}
+
 .card-img {
     max-width: 100%;
     height: auto;
+}
+
+/* hover ------------------------ */
+
+.hover-fade-in .card-body {
+    opacity: 0;
+    transition-duration: .3s;
+}
+
+.hover-fade-in:hover .card-body {
+    opacity: 1;
+}
+
+.hover-fade-out .card-body {
+    opacity: 1;
+    transition-duration: .3s;
+}
+
+.hover-fade-out:hover .card-body {
+    opacity: 0;
+}
+
+.hover-zoom-in .fas {
+    transform: scale(0);
+    transition-duration: .3s;
+}
+
+.hover-zoom-in:hover .fas {
+    transform: scale(1);
 }
