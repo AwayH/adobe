@@ -51,3 +51,27 @@
     line-height: 1.7;
     text-align: justify;
 }
+
+/* grid ------------------------- */
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.grid-2 {
+    /* grid-template-columns: 33.333% 33.333% 33.333%; */
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    /* grid-template-columns: 33.333% 33.333% 33.333%; */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* card ---------------------------- */
+
+.card-img {
+    max-width: 100%;
+    height: auto;
+}
