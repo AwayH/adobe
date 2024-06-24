@@ -1,31 +1,36 @@
-// let isMobile;
-
-// if ($(window).width() <= 480) {
-//     isMobile = true;
-// } else {
-//     isMobile = false;
-// }
-// console.log(isMobile)
-
 const isMobile = $(window).width() <= 480;
+const $grid = $('#Grid');
+const $nav = $('#Nav');
 
 function setGrid() {
     if (isMobile) {
-        $('#Grid').addClass('grid-2');
+        $grid.addClass('grid-2');
         return;
     }
-    $('#Grid').addClass('grid-3');
+    $grid.addClass('grid-3');
 }
 
-setGrid();
+function setScroll() {
+    $(window).scroll(function () {
+        // isMobile: true
+        // !isMobile: false
+        if (!isMobile) return;
 
+        if ($(this).scrollTop() == 0) {
+            $nav.removeClass('nav-active');
+        } else {
+            $nav.addClass('nav-active');
+        }
+    });
+}
 
-$(window).scroll(function () {
-    // console.log($(window).scrollTop());
-    if ($(window).scrollTop() == 0) {
-        $('#Nav').removeClass('nav-active');
-    } else {
-        $('#Nav').addClass('nav-active');
-    }
-});
+function setInit() {
+    setGrid();
+}
 
+function setEvent() {
+    setScroll();
+}
+
+setInit();
+setEvent();
