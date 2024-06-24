@@ -30,6 +30,14 @@ function setInit() {
 
 function setEvent() {
     setScroll();
+    setFancybox();
+}
+
+function setFancybox() {
+    $grid.find('a').fancybox({
+        protect: true,
+        loop: true
+    });
 }
 
 setInit();
