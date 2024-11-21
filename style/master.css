@@ -124,3 +124,41 @@
 .hover-zoom-in:hover .fas {
     transform: scale(1);
 }
+
+/* RWD ---------------------- */
+
+@media screen and (max-width: 1024px) {
+    .article {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .article {
+        width: auto;
+        padding: 4rem 2rem 2rem;
+    }
+
+    .nav {
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-active {
+        background-color: rgba(0, 0, 0, .7);
+    }
+
+    .nav-btn-index {
+        background-color: lightskyblue;
+    }
+
+    .article-title {
+        text-align: center;
+    }
+
+
+}

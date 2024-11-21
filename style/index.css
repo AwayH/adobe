@@ -80,3 +80,11 @@ body {
 .nav-btn-dreamweaver {
     background-color: #84c922;
 }
+
+/* RWD ------------------------------------- */
+
+@media screen and (max-width: 480px) {
+    .nav-li {
+        width: 50%;
+    }
+}
