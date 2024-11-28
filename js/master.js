@@ -17,6 +17,7 @@
 
 const isMobile = $(window).width() <= 480;
 const $grid = $('#Grid');
+const $anchors = $grid.find('a');
 
 // console.log(isMobile);
 // console.log($nav);
@@ -50,7 +51,13 @@ function setInit() {
 
 function setEvent() {
   setScroll();
+  setFancybox();
 }
+
+function setFancybox() {
+  $anchors.fancybox();
+}
+
 
 setInit();
 setEvent();
