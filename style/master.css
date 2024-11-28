@@ -27,7 +27,12 @@
 
 .nav-btn-index {
     background-color: #000;
+}  
+
+.nav-active {
+    background-color: rgba(0, 0, 0, .7);
 }
+
 
 /* article ------------------------- */
 
@@ -148,9 +153,6 @@
         justify-content: center;
     }
 
-    .nav-active {
-        background-color: rgba(0, 0, 0, .7);
-    }
 
     .nav-btn-index {
         background-color: lightskyblue;
