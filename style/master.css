@@ -24,6 +24,15 @@
   opacity: 1;
 }
 
+.nav-btn-active {
+  opacity: 1;
+}
+
+.nav-btn-index {
+  background-color: yellow;
+  opacity: 1;
+}
+
 /* article ----------------------- */
 
 .article {
@@ -71,7 +80,62 @@
 
 /* card -------------------------- */
 
+.card {
+  position: relative;
+}
+
+.card-body  {
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.card-body:hover {
+  /* display: flex; */
+  opacity: 1;
+}
+
+.card-body .fas {
+  font-size: 2rem;
+  color: #fff;
+}
+
 .card-img {
   max-width: 100%;
   height: auto;
+}
+
+.hover-fade-in .card-body {
+  opacity: 0;
+  transition-duration: .3s;
+}
+
+.hover-fade-in .card-body:hover {
+  opacity: 1;
+}
+
+.hover-fade-out .card-body {
+  opacity: 1;
+  transition-duration: .3s;
+}
+
+.hover-fade-out .card-body:hover {
+  opacity: 0;
+}
+
+.hover-zoom-in .fas {
+  transform: scale(0);
+  transition-duration: .3s;
+}
+
+.hover-zoom-in:hover .fas {
+  transform: scale(1);
 }
